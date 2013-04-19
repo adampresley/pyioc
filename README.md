@@ -13,9 +13,9 @@ class ExampleService():
 ```
 
 ```python
-import pyioc
+import pyioc as ioc
 
-pyioc.configure(
+ioc.configure(
 	paths=("../model",),
 	config={
 		"ExampleService": {
@@ -33,7 +33,7 @@ pyioc.configure(
 	}
 )
 
-service = pyioc.getBean("ExampleService")
+service = ioc.getBean("ExampleService")
 service.saveInfo(1, datetime.now)
 ```
 
